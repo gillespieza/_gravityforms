@@ -349,6 +349,13 @@
                             } // gfield_description
                         } // gfield_error
                     }
+                    // VALID FIELDS 
+                    input, textarea, select {
+                        &.LV_valid_field {
+                            @extend .is-valid;
+                            background-color: #edf9f0;
+                        }
+                    }
                 }
             }
         } // form
