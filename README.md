@@ -4,3 +4,12 @@ A sass file that you can include in your WordPress project, to bootstrappify Gra
 # Usage
 - Include the sass file in your own scss includes and compile the css as you would normally
 - In the Gravity Forms plugin settings, select *No* for "Output CSS" and *Yes* for "Output HTML5" 
+
+-----------------
+# gravityforms-snippets
+Code snippets for added GravityForms functionality. Add to functions.php
+Includes:
+- Word Count (NOTE: does not work if rich text is included)
+- List and hyperlink specific errors (NOTE: does not work with RealTime Validation plugin)
+
+
