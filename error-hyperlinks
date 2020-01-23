@@ -1,0 +1,19 @@
+add_filter( 'gform_validation_message', function ( $message, $form ) {
+  if ( gf_upgrade()->get_submissions_block() ) {
+      return $message;
+  }
+
+  $message = "<div class='col-11 mx-auto alert alert-danger mt-3'>";
+  $message .= " <h4 class='text-center my-3'><i class='fas fa-exclamation-triangle'></i>&nbsp;There was a problem with your submission. Errors have been highlighted below.</h4>";
+  $message .= "   <ul class='ml-4'>";
+
+  foreach ( $form['fields'] as $field ) {
+      if ( $field->failed_validation ) {
+          $message .= sprintf( '<li><a class="alert-link" href="#input_%s_%s" title="Jump to error">%s</a> - %s</li>', $field->formId, $field->id, GFCommon::get_label( $field ), $field->validation_message );
+      }
+  }
+
+  $message .= '</ul></div>';
+
+  return $message;
+}, 10, 2 );
