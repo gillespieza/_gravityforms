@@ -1,0 +1,13 @@
+// Added custom validation for max word count
+// 7 is the form_id for CCP42020 registration
+// 39 is the field id for the Abstract
+add_filter("gform_field_validation_7_50", "validate_word_count", 10, 4);
+
+function validate_word_count($result, $value, $form, $field){
+    if (str_word_count($value) > 300) // Maximum number of words
+    {
+        $result["is_valid"] = false;
+        $result["message"] = "Please enter 250 words or less.";
+    }
+    return $result;
+}
