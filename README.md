@@ -1,4 +1,4 @@
-# gravityforms-bootstrap4-sass
+# gravityforms-bootstrap-sass
 A sass file that you can include in your WordPress project, to bootstrappify Gravity Forms without a plugin.
 
 # Usage
