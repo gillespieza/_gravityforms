@@ -7,7 +7,7 @@ A sass file that you can include in your WordPress project, to bootstrappify Gra
 
 -----------------
 # Snippets
-Code snippets for added GravityForms functionality. Add to functions.php
+Code snippets for added GravityForms functionality. Add to `functions.php`.  
 Includes:
 - Word Count (NOTE: does not work if rich text is included)
 - List and hyperlink specific errors (NOTE: does not work with RealTime Validation plugin)
